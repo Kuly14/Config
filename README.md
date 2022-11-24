@@ -1,6 +1,5 @@
 # Config
 
-
 ## Vim 
 
-You also have to install [Plug](https://github.com/junegunn/vim-plug)
+For this .vimrc to work you will also have to install [Plug](https://github.com/junegunn/vim-plug)
