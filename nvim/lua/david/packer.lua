@@ -10,8 +10,12 @@ return require('packer').startup(function(use)
   use('nvim-treesitter/playground')
   use('theprimeagen/harpoon')
   use('mbbill/undotree')
+  use('scalameta/nvim-metals')
   use('airblade/vim-gitgutter')
   use { 'ellisonleao/gruvbox.nvim' }
+  -- use('bluz71/vim-nightfly-colors')
+  -- use("folke/tokyonight.nvim")
+  -- use("bluz71/vim-nightfly-colors")
   use {
       'numToStr/Comment.nvim',
       config = function()

@@ -1,4 +1,14 @@
 require("david")
+-- vim.o.background = "dark" 
+vim.o.hlsearch = true
+vim.cmd("colorscheme gruvbox")
 
-vim.o.background = "dark" 
-vim.cmd([[colorscheme gruvbox]])
+local nvim_metals_group = vim.api.nvim_create_augroup("nvim-metals", { clear = true })
+  vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "scala", "sbt", "java" },
+    callback = function()
+      require("metals").initialize_or_attach({})
+    end,
+    group = nvim_metals_group,
+  })
+
