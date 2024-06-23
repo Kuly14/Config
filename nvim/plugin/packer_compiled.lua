@@ -49,8 +49,8 @@ local function save_profiles(threshold)
 end
 
 time([[Luarocks path setup]], true)
-local package_path_str = "/Users/david/.cache/nvim/packer_hererocks/2.1.1699180677/share/lua/5.1/?.lua;/Users/david/.cache/nvim/packer_hererocks/2.1.1699180677/share/lua/5.1/?/init.lua;/Users/david/.cache/nvim/packer_hererocks/2.1.1699180677/lib/luarocks/rocks-5.1/?.lua;/Users/david/.cache/nvim/packer_hererocks/2.1.1699180677/lib/luarocks/rocks-5.1/?/init.lua"
-local install_cpath_pattern = "/Users/david/.cache/nvim/packer_hererocks/2.1.1699180677/lib/lua/5.1/?.so"
+local package_path_str = "/Users/david/.cache/nvim/packer_hererocks/2.1.1713773202/share/lua/5.1/?.lua;/Users/david/.cache/nvim/packer_hererocks/2.1.1713773202/share/lua/5.1/?/init.lua;/Users/david/.cache/nvim/packer_hererocks/2.1.1713773202/lib/luarocks/rocks-5.1/?.lua;/Users/david/.cache/nvim/packer_hererocks/2.1.1713773202/lib/luarocks/rocks-5.1/?/init.lua"
+local install_cpath_pattern = "/Users/david/.cache/nvim/packer_hererocks/2.1.1713773202/lib/lua/5.1/?.so"
 if not string.find(package.path, package_path_str, 1, true) then
   package.path = package.path .. ';' .. package_path_str
 end
@@ -155,6 +155,12 @@ _G.packer_plugins = {
     path = "/Users/david/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ultisnips = {
+    config = { "\27LJ\2\n›\1\0\0\2\0\n\0\0176\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0'\1\5\0=\1\4\0006\0\0\0009\0\1\0'\1\a\0=\1\6\0006\0\0\0009\0\1\0005\1\t\0=\1\b\0K\0\1\0\1\2\0\0\14UltiSnips UltiSnipsSnippetDirectories\n<c-z>!UltiSnipsJumpBackwardTrigger\n<c-b> UltiSnipsJumpForwardTrigger\n<tab>\27UltiSnipsExpandTrigger\6g\bvim\0" },
+    loaded = true,
+    path = "/Users/david/.local/share/nvim/site/pack/packer/start/ultisnips",
+    url = "https://github.com/SirVer/ultisnips"
+  },
   undotree = {
     loaded = true,
     path = "/Users/david/.local/share/nvim/site/pack/packer/start/undotree",
@@ -164,10 +170,19 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/david/.local/share/nvim/site/pack/packer/start/vim-gitgutter",
     url = "https://github.com/airblade/vim-gitgutter"
+  },
+  vimtex = {
+    loaded = true,
+    path = "/Users/david/.local/share/nvim/site/pack/packer/start/vimtex",
+    url = "https://github.com/lervag/vimtex"
   }
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: ultisnips
+time([[Config for ultisnips]], true)
+try_loadstring("\27LJ\2\n›\1\0\0\2\0\n\0\0176\0\0\0009\0\1\0'\1\3\0=\1\2\0006\0\0\0009\0\1\0'\1\5\0=\1\4\0006\0\0\0009\0\1\0'\1\a\0=\1\6\0006\0\0\0009\0\1\0005\1\t\0=\1\b\0K\0\1\0\1\2\0\0\14UltiSnips UltiSnipsSnippetDirectories\n<c-z>!UltiSnipsJumpBackwardTrigger\n<c-b> UltiSnipsJumpForwardTrigger\n<tab>\27UltiSnipsExpandTrigger\6g\bvim\0", "config", "ultisnips")
+time([[Config for ultisnips]], false)
 -- Config for: Comment.nvim
 time([[Config for Comment.nvim]], true)
 try_loadstring("\27LJ\2\n5\0\0\3\0\3\0\0066\0\0\0'\2\1\0B\0\2\0029\0\2\0B\0\1\1K\0\1\0\nsetup\fComment\frequire\0", "config", "Comment.nvim")

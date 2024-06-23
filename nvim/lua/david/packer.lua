@@ -13,6 +13,17 @@ return require('packer').startup(function(use)
   use('scalameta/nvim-metals')
   use('airblade/vim-gitgutter')
   use { 'ellisonleao/gruvbox.nvim' }
+  use {'lervag/vimtex', lazy = false }
+  use {
+    'SirVer/ultisnips',
+    config = function()
+        vim.g.UltiSnipsExpandTrigger = '<tab>'
+        vim.g.UltiSnipsJumpForwardTrigger = '<c-b>'
+        vim.g.UltiSnipsJumpBackwardTrigger = '<c-z>'
+        vim.g.UltiSnipsSnippetDirectories = { 'UltiSnips' }
+    end
+  }
+
   -- use('bluz71/vim-nightfly-colors')
   -- use("folke/tokyonight.nvim")
   -- use("bluz71/vim-nightfly-colors")
