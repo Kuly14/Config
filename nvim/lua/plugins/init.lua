@@ -12,6 +12,13 @@ return {
         dependencies = { "nvim-tree/nvim-web-devicons" },
         config = function()
             require("nvim-tree").setup {
+                actions = {
+                    open_file = {
+                        window_picker = {
+                            enable = false, -- Disable window picker to avoid manual selection
+                        },
+                    },
+                },
                 on_attach = function(bufnr)
                     local api = require("nvim-tree.api")
                     local function opts(desc)
@@ -19,8 +26,10 @@ return {
                     end
                     -- Load default mappings
                     api.config.mappings.default_on_attach(bufnr)
-                    -- Override Enter to open in a new tab
+                    -- Custom mappings with default split directions
                     vim.keymap.set("n", "<CR>", api.node.open.tab, opts("Open in new tab"))
+                    vim.keymap.set("n", "<C-v>", api.node.open.vertical, opts("Open in vertical split to the right"))
+                    vim.keymap.set("n", "<C-x>", api.node.open.horizontal, opts("Open in horizontal split at the bottom"))
                 end,
             }
         end,
